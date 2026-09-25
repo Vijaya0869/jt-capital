@@ -5,12 +5,12 @@
   "actions": [
     {
       "label": "Investor inquiries",
-      "href": "mailto:raj.gumma@rrgp.io?subject=JR%20Capital%20%E2%80%94%20investor%20inquiry",
+      "href": "mailto:raj.gumma@rrgp.io?subject=JT%20Capital%20%E2%80%94%20investor%20inquiry",
       "primary": true
     },
     {
       "label": "Submit a deal",
-      "href": "mailto:raj.gumma@rrgp.io?subject=JR%20Capital%20%E2%80%94%20deal%20submission",
+      "href": "mailto:raj.gumma@rrgp.io?subject=JT%20Capital%20%E2%80%94%20deal%20submission",
       "primary": false
     }
   ],
@@ -40,6 +40,6 @@
   ],
   "note": {
     "title": "To add",
-    "body": "A dedicated JR Capital email address and phone number, and the rrgp.io link on the operating-arm row."
+    "body": "A dedicated JT Capital email address and phone number, and the rrgp.io link on the operating-arm row."
   }
 }

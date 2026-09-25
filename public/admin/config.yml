@@ -17,7 +17,7 @@ backend:
   base_url: https://api.netlify.com
   # The Netlify site holding the GitHub OAuth provider. Required because the
   # admin runs on www.jtcapitalgrp.com, which Netlify would not recognise.
-  site_domain: jr-capital.netlify.app # TODO: your Netlify site's domain
+  site_domain: jt-capital.netlify.app # TODO: your Netlify site's domain
 
 # `npm run cms` runs a local proxy so /admin edits files on disk without login.
 local_backend: true

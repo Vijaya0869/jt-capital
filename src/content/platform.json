@@ -1,7 +1,7 @@
 {
   "eyebrow": "Platform",
   "heading": "Four businesses, one P&L.",
-  "lede": "JR Capital raises and deploys the capital. R&R Grandeur Properties buys, builds and operates the asset. The margin a third-party sponsor pays away stays inside the deal.",
+  "lede": "JT Capital raises and deploys the capital. R&R Grandeur Properties buys, builds and operates the asset. The margin a third-party sponsor pays away stays inside the deal.",
   "arms": [
     {
       "n": "01",
@@ -34,12 +34,12 @@
     "rows": [
       {
         "label": "Acquisition & underwriting",
-        "detail": "JR Capital (GP)",
+        "detail": "JT Capital (GP)",
         "value": "1.5% of purchase price"
       },
       {
         "label": "Asset management",
-        "detail": "JR Capital (GP)",
+        "detail": "JT Capital (GP)",
         "value": "1.5% of effective gross revenue"
       },
       {

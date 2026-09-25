@@ -7,7 +7,7 @@ export default function Masthead() {
     <header className="sticky top-0 z-40 border-b border-rule bg-bg">
       <Wrap className="flex min-h-[66px] items-center justify-between gap-5">
         <a href="#top" className="flex items-baseline gap-2 no-underline">
-          <span className="font-display text-[22px] tracking-[0.06em] text-brass">JR</span>
+          <span className="font-display text-[22px] tracking-[0.06em] text-brass">JT</span>
           <span className="font-display text-[22px] tracking-[0.02em]">Capital</span>
           <span className="label ml-1.5 hidden text-[9.5px] tracking-[0.16em] sm:inline">
             {firm.tagline}

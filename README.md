@@ -1,4 +1,4 @@
-# JR Capital — website
+# JT Capital — website
 
 Vite + React + Tailwind. Single marketing page with anchor navigation; no
 backend, no forms that collect data (mailto links only, deliberately).
@@ -118,7 +118,7 @@ token must exist on the bare `:root` first.
 - [ ] **Securities counsel review** — the affiliate fee structure (10%
       construction + 10% property management to R&R Grandeur) is what a reviewer
       will focus on. 506(b) vs 506(c) is undecided.
-- [ ] Dedicated JR Capital email address and phone number
+- [ ] Dedicated JT Capital email address and phone number
 - [ ] Point the operating-arm link at rrgp.io (`firm.operatingArmUrl`)
 - [ ] Replace illustrative figures with real underwriting once the Dana Heights
       purchase agreement and a lender term sheet exist

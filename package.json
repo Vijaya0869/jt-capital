@@ -1,8 +1,8 @@
 {
-  "name": "jr-capital-web",
+  "name": "jt-capital-web",
   "private": true,
   "version": "1.0.0",
-  "description": "JR Capital \u2014 sponsor and general partner site",
+  "description": "JT Capital \u2014 sponsor and general partner site",
   "type": "module",
   "scripts": {
     "dev": "vite",
