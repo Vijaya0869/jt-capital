@@ -1,0 +1,45 @@
+{
+  "eyebrow": "Contact",
+  "heading": "Start with a conversation.",
+  "lede": "For accredited investors evaluating Ohio real estate, and for brokers and sellers with an asset that fits the box above.",
+  "actions": [
+    {
+      "label": "Investor inquiries",
+      "href": "mailto:raj.gumma@rrgp.io?subject=JR%20Capital%20%E2%80%94%20investor%20inquiry",
+      "primary": true
+    },
+    {
+      "label": "Submit a deal",
+      "href": "mailto:raj.gumma@rrgp.io?subject=JR%20Capital%20%E2%80%94%20deal%20submission",
+      "primary": false
+    }
+  ],
+  "details": [
+    {
+      "term": "Email",
+      "value": "raj.gumma@rrgp.io",
+      "href": "mailto:raj.gumma@rrgp.io"
+    },
+    {
+      "term": "Principal",
+      "value": "Raj Gumma"
+    },
+    {
+      "term": "Office",
+      "value": "Columbus, Ohio"
+    },
+    {
+      "term": "Minimum",
+      "value": "$50,000"
+    },
+    {
+      "term": "Operating arm",
+      "value": "R&R Grandeur",
+      "href": "#"
+    }
+  ],
+  "note": {
+    "title": "To add",
+    "body": "A dedicated JR Capital email address and phone number, and the rrgp.io link on the operating-arm row."
+  }
+}

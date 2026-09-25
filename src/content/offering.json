@@ -1,0 +1,76 @@
+{
+  "status": "Open — accredited investors",
+  "title": "Ohio Value-Add Portfolio I",
+  "cta": {
+    "label": "Request the materials",
+    "href": "mailto:raj.gumma@rrgp.io?subject=Ohio%20Value-Add%20Portfolio%20I%20%E2%80%94%20investor%20materials"
+  },
+  "lede": "Two Southwest Ohio assets, 50 units, one construction team. A stabilized value-add apartment community in Cincinnati and a 24-unit adaptive-reuse conversion in Dayton — bought on what they produce, not on what a future buyer might pay.",
+  "assets": [
+    {
+      "name": "Dana Heights",
+      "meta": "26 units · Cincinnati, Ohio · Under LOI",
+      "body": "A 1968 garden-style community owned and self-managed by the same private owner for decades. Rents have never been pushed on turn, utilities are not billed back, and expenses have never been professionally tendered. The renovation is a turn-based interior program, so the asset produces income throughout.",
+      "facts": [
+        {
+          "term": "All-in basis",
+          "value": "$2,288,000"
+        },
+        {
+          "term": "Per unit",
+          "value": "$88,000"
+        },
+        {
+          "term": "In-place rent",
+          "value": "$795"
+        },
+        {
+          "term": "Stabilized rent",
+          "value": "$1,150"
+        }
+      ]
+    },
+    {
+      "name": "434 W Grand Avenue",
+      "meta": "24 units · Dayton, Ohio · In pursuit",
+      "body": "A 1925 building being converted to residential dwelling units. Value here is created through entitlement and construction rather than rent growth. A parking variance is in process with the City of Dayton; closing on the site is conditioned on that relief being granted.",
+      "facts": [
+        {
+          "term": "All-in basis",
+          "value": "$1,775,000"
+        },
+        {
+          "term": "Per unit",
+          "value": "$73,958"
+        },
+        {
+          "term": "Construction",
+          "value": "~12 months"
+        },
+        {
+          "term": "Stabilized rent",
+          "value": "$1,025"
+        }
+      ]
+    }
+  ],
+  "returns": [
+    {
+      "value": "9.73%",
+      "label": "Stabilized yield on cost"
+    },
+    {
+      "value": "16.3%",
+      "label": "Target LP IRR"
+    },
+    {
+      "value": "2.03×",
+      "label": "Target equity multiple"
+    },
+    {
+      "value": "8.2%",
+      "label": "Average cash-on-cash"
+    }
+  ],
+  "disclosure": "Every figure shown is prepared to demonstrate the offering's structure and underwriting method. It is not derived from executed purchase agreements, third-party appraisals or lender commitments. Neither asset is owned by the Company. Targets are hypothetical and are not a prediction or guarantee of results."
+}

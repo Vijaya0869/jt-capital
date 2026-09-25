@@ -1,0 +1,32 @@
+{
+  "eyebrow": "Process",
+  "heading": "What happens after you get in touch.",
+  "lede": "Deal by deal, so you decide on each property rather than on a commitment made a year earlier.",
+  "steps": [
+    {
+      "n": "01",
+      "title": "Introduction",
+      "body": "A call to cover your objectives, check size, hold-period tolerance, and whether this strategy actually fits what you are trying to do."
+    },
+    {
+      "n": "02",
+      "title": "Qualification",
+      "body": "Accredited investor status confirmed and documentation completed before any specific offering material is shared."
+    },
+    {
+      "n": "03",
+      "title": "Deal package",
+      "body": "You receive the underwriting model, the renovation budget, market and rent comparables, and the full offering documents — and review them with your own advisors."
+    },
+    {
+      "n": "04",
+      "title": "Subscription",
+      "body": "Subscribe if it fits, and fund ahead of closing. Passing on a deal has no effect on future ones."
+    },
+    {
+      "n": "05",
+      "title": "Ownership",
+      "body": "Quarterly reporting on operations, renovation progress and distributions, plus an annual K-1. Direct access to the sponsor, not an investor-relations queue."
+    }
+  ]
+}

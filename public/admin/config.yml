@@ -1,0 +1,289 @@
+# Decap CMS — edits the JSON files in src/content/.
+#
+# Every save opens a draft (a pull request on GitHub) under the editorial
+# workflow. Nothing reaches the live site until it is published from the
+# Workflow tab, so figures and offering language can be reviewed first.
+#
+# The footer disclaimer and chapter numerals are intentionally NOT editable
+# here; they live in src/data/content.js.
+
+# Editors sign in with GitHub and need write access to the repo. The GitHub
+# OAuth handshake goes through Netlify's OAuth service, so the same config
+# works whether the admin is served from GitHub Pages or Netlify.
+backend:
+  name: github
+  repo: Vijaya0869/jt-capital
+  branch: main
+  base_url: https://api.netlify.com
+  # The Netlify site holding the GitHub OAuth provider. Required because the
+  # admin runs on www.jtcapitalgrp.com, which Netlify would not recognise.
+  site_domain: jr-capital.netlify.app # TODO: your Netlify site's domain
+
+# `npm run cms` runs a local proxy so /admin edits files on disk without login.
+local_backend: true
+
+publish_mode: editorial_workflow
+site_url: https://www.jtcapitalgrp.com/
+
+media_folder: public/uploads
+public_folder: /uploads
+
+# Collections ---------------------------------------------------------------
+
+collections:
+  - name: site
+    label: Site
+    editor: { preview: false }
+    files:
+      - label: Firm details
+        name: firm
+        file: src/content/firm.json
+        format: json
+        fields:
+          - { label: Firm name, name: name, widget: string }
+          - { label: Tagline, name: tagline, widget: string }
+          - { label: Location, name: location, widget: string }
+          - { label: Principal, name: principal, widget: string }
+          - { label: Email, name: email, widget: string }
+          - { label: Operating arm, name: operatingArm, widget: string }
+          - { label: Operating arm URL, name: operatingArmUrl, widget: string, hint: "TODO: rrgp.io production URL" }
+          - { label: Minimum investment, name: minimum, widget: string, hint: &figureHint "ILLUSTRATIVE FIGURE. Must match the Ohio Value-Add Portfolio I model." }
+
+      - label: Navigation
+        name: nav
+        file: src/content/nav.json
+        format: json
+        fields:
+          - label: Links
+            name: items
+            widget: list
+            summary: "{{fields.label}}"
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: Anchor, name: href, widget: string, hint: "e.g. #thesis" }
+
+  - name: sections
+    label: Page sections
+    editor: { preview: false }
+    files:
+      - label: Hero
+        name: hero
+        file: src/content/hero.json
+        format: json
+        fields:
+          - { label: Kicker, name: kicker, widget: string }
+          - { label: Headline — before emphasis, name: headlineBefore, widget: string, hint: Include the trailing space. }
+          - { label: Headline — emphasised words (brass italic), name: emphasis, widget: string }
+          - { label: Headline — after emphasis, name: headlineAfter, widget: string, hint: Include the leading space. }
+          - { label: Standfirst, name: standfirst, widget: text }
+          - label: Buttons
+            name: actions
+            widget: list
+            summary: "{{fields.label}}"
+            fields: &action
+              - { label: Label, name: label, widget: string }
+              - { label: Link, name: href, widget: string, hint: "#section, https://… or mailto:…" }
+              - { label: Primary style, name: primary, widget: boolean, default: false, required: false }
+          - label: Key terms
+            name: terms
+            widget: list
+            summary: "{{fields.value}} — {{fields.label}}"
+            fields:
+              - { label: Value, name: value, widget: string }
+              - { label: Label, name: label, widget: string }
+
+      - label: "Current offering"
+        name: offering
+        file: src/content/offering.json
+        format: json
+        fields:
+          - { label: Status badge, name: status, widget: string }
+          - { label: Title, name: title, widget: string }
+          - label: Call to action
+            name: cta
+            widget: object
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: Link, name: href, widget: string, hint: mailto link with URL-encoded subject }
+          - { label: Lede, name: lede, widget: text }
+          - label: Assets
+            name: assets
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Meta line, name: meta, widget: string, hint: "Units · City · Status" }
+              - { label: Description, name: body, widget: text }
+              - label: Facts
+                name: facts
+                widget: list
+                hint: *figureHint
+                summary: "{{fields.term}}: {{fields.value}}"
+                fields:
+                  - { label: Term, name: term, widget: string }
+                  - { label: Value, name: value, widget: string }
+          - label: Target returns
+            name: returns
+            widget: list
+            hint: *figureHint
+            summary: "{{fields.value}} — {{fields.label}}"
+            fields:
+              - { label: Value, name: value, widget: string }
+              - { label: Label, name: label, widget: string }
+          - label: Disclosure
+            name: disclosure
+            widget: text
+            hint: >-
+              Shown after a fixed "Illustrative." label. Securities language —
+              get counsel sign-off before changing.
+
+      - label: "I — Thesis"
+        name: thesis
+        file: src/content/thesis.json
+        format: json
+        fields:
+          - { label: Eyebrow, name: eyebrow, widget: string }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Lede, name: lede, widget: text }
+          - label: Points
+            name: points
+            widget: list
+            summary: "{{fields.tag}}"
+            fields:
+              - { label: Tag, name: tag, widget: string, hint: "e.g. 01 — Basis" }
+              - { label: Title, name: title, widget: string }
+              - { label: Body, name: body, widget: text }
+
+      - label: "II — Strategy"
+        name: strategy
+        file: src/content/strategy.json
+        format: json
+        fields:
+          - { label: Eyebrow, name: eyebrow, widget: string }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Lede, name: lede, widget: text }
+          - label: Strategies
+            name: items
+            widget: list
+            summary: "{{fields.key}} — {{fields.title}}"
+            fields:
+              - { label: Key, name: key, widget: string, hint: "A, B, …" }
+              - { label: Title, name: title, widget: string }
+              - { label: Body, name: body, widget: text }
+          - { label: Pull quote, name: pullQuote, widget: text }
+
+      - label: "III — Platform"
+        name: platform
+        file: src/content/platform.json
+        format: json
+        fields:
+          - { label: Eyebrow, name: eyebrow, widget: string }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Lede, name: lede, widget: text }
+          - label: Business arms
+            name: arms
+            widget: list
+            summary: "{{fields.n}} — {{fields.title}}"
+            fields:
+              - { label: Number, name: n, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Body, name: body, widget: text }
+          - label: Fee table
+            name: table
+            widget: object
+            fields: &tableFields
+              - { label: Caption, name: caption, widget: string }
+              - label: Column headings
+                name: columns
+                widget: list
+                min: 3
+                max: 3
+                hint: Exactly three. The third is the right-aligned figure column.
+              - label: Rows
+                name: rows
+                widget: list
+                summary: "{{fields.label}} — {{fields.value}}"
+                fields:
+                  - { label: Column 1, name: label, widget: string }
+                  - { label: Column 2, name: detail, widget: string }
+                  - { label: Column 3 (figure), name: value, widget: string }
+          - &note
+            label: Review note
+            name: note
+            widget: object
+            hint: Callout box shown on the page. Clear or rewrite it before launch.
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Body, name: body, widget: text }
+
+      - label: "IV — Structure"
+        name: structure
+        file: src/content/structure.json
+        format: json
+        fields:
+          - { label: Eyebrow, name: eyebrow, widget: string }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Lede, name: lede, widget: text }
+          - label: Capital stack
+            name: stack
+            widget: list
+            summary: "{{fields.who}}"
+            fields:
+              - { label: Who, name: who, widget: string }
+              - { label: Role, name: what, widget: text }
+              - { label: Amount / share, name: amt, widget: string }
+          - { label: Distribution waterfall, name: waterfall, widget: object, hint: *figureHint, fields: *tableFields }
+          - { label: Capitalization, name: capitalization, widget: object, hint: *figureHint, fields: *tableFields }
+          - *note
+
+      - label: "V — Criteria"
+        name: criteria
+        file: src/content/criteria.json
+        format: json
+        fields:
+          - { label: Eyebrow, name: eyebrow, widget: string }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Lede, name: lede, widget: text }
+          - label: Columns
+            name: columns
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Items, name: items, widget: list, field: { label: Item, name: item, widget: string } }
+
+      - label: "VI — Process"
+        name: process
+        file: src/content/process.json
+        format: json
+        fields:
+          - { label: Eyebrow, name: eyebrow, widget: string }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Lede, name: lede, widget: text }
+          - label: Steps
+            name: steps
+            widget: list
+            summary: "{{fields.n}} — {{fields.title}}"
+            fields:
+              - { label: Number, name: n, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Body, name: body, widget: text }
+
+      - label: "VII — Contact"
+        name: contact
+        file: src/content/contact.json
+        format: json
+        fields:
+          - { label: Eyebrow, name: eyebrow, widget: string }
+          - { label: Heading, name: heading, widget: string }
+          - { label: Lede, name: lede, widget: text }
+          - { label: Buttons, name: actions, widget: list, summary: "{{fields.label}}", fields: *action }
+          - label: Details
+            name: details
+            widget: list
+            summary: "{{fields.term}}: {{fields.value}}"
+            fields:
+              - { label: Term, name: term, widget: string }
+              - { label: Value, name: value, widget: string }
+              - { label: Link, name: href, widget: string, required: false }
+          - *note

@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------------------------------------------------------------------
+   Design tokens — a dark-first investment memo.
+   This design commits to dark as its primary look, so the bare :root block
+   declares the COMPLETE DARK palette and light is the redefinition. The pattern
+   is otherwise identical to a light-first design: media query and [data-theme]
+   blocks only redefine, never introduce, a token.
+--------------------------------------------------------------------------- */
+:root {
+  --bg: #0b1015;
+  --panel: #111820;
+  --panel-2: #16212c;
+  --ink: #e4e9ee;
+  --ink-2: #9aaab8;
+  --ink-3: #6c7c8b;
+  --rule: #1e2831;
+  --rule-strong: #2c3945;
+  --brass: #c0a063;
+  --brass-soft: #8e7442;
+  --brass-wash: #1a1810;
+  --on-brass: #0b1015;
+  --steel: #6e93ae;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme='dark']) {
+    --bg: #f6f7f8;
+    --panel: #ffffff;
+    --panel-2: #edeff2;
+    --ink: #111820;
+    --ink-2: #4c5a67;
+    --ink-3: #78868f;
+    --rule: #dfe3e8;
+    --rule-strong: #c3cad2;
+    --brass: #8a6e31;
+    --brass-soft: #a98f55;
+    --brass-wash: #f3eee1;
+    --on-brass: #ffffff;
+    --steel: #3c6484;
+  }
+}
+
+:root[data-theme='light'] {
+  --bg: #f6f7f8;
+  --panel: #ffffff;
+  --panel-2: #edeff2;
+  --ink: #111820;
+  --ink-2: #4c5a67;
+  --ink-3: #78868f;
+  --rule: #dfe3e8;
+  --rule-strong: #c3cad2;
+  --brass: #8a6e31;
+  --brass-soft: #a98f55;
+  --brass-wash: #f3eee1;
+  --on-brass: #ffffff;
+  --steel: #3c6484;
+}
+
+@layer base {
+  html {
+    color-scheme: dark light;
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-bg text-ink font-sans antialiased;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.62;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+    font-weight: 400;
+    margin: 0;
+  }
+  :focus-visible {
+    outline: 2px solid var(--brass);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .label {
+    @apply font-mono uppercase text-ink-3;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+  }
+  .tnum {
+    font-variant-numeric: tabular-nums;
+  }
+  /* Tight bordered grids: a 1px gap over a rule-coloured ground, rather than
+     separated cards with shadows. */
+  .hairgrid {
+    @apply gap-px border border-rule bg-rule;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

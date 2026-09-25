@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "label": "Current offering",
+      "href": "#offering"
+    },
+    {
+      "label": "Thesis",
+      "href": "#thesis"
+    },
+    {
+      "label": "Platform",
+      "href": "#platform"
+    },
+    {
+      "label": "Structure",
+      "href": "#structure"
+    },
+    {
+      "label": "Criteria",
+      "href": "#criteria"
+    }
+  ]
+}

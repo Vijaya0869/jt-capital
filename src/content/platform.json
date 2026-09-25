@@ -1,0 +1,66 @@
+{
+  "eyebrow": "Platform",
+  "heading": "Four businesses, one P&L.",
+  "lede": "JR Capital raises and deploys the capital. R&R Grandeur Properties buys, builds and operates the asset. The margin a third-party sponsor pays away stays inside the deal.",
+  "arms": [
+    {
+      "n": "01",
+      "title": "Acquisitions",
+      "body": "Direct-to-seller, broker and wholesale sourcing across Central and Southwest Ohio. Every deal runs one underwriting standard."
+    },
+    {
+      "n": "02",
+      "title": "Construction",
+      "body": "In-house crews and trade relationships execute renovation and ground-up work to a fixed scope and schedule."
+    },
+    {
+      "n": "03",
+      "title": "Operations",
+      "body": "Leasing, maintenance, renewals and collections managed in-house on documented standard operating procedures."
+    },
+    {
+      "n": "04",
+      "title": "Development",
+      "body": "Land and adaptive-reuse sites taken through variance, site plan and permit, then built by the same team."
+    }
+  ],
+  "table": {
+    "caption": "Who does what, and how it is compensated",
+    "columns": [
+      "Function",
+      "Performed by",
+      "Compensation"
+    ],
+    "rows": [
+      {
+        "label": "Acquisition & underwriting",
+        "detail": "JR Capital (GP)",
+        "value": "1.5% of purchase price"
+      },
+      {
+        "label": "Asset management",
+        "detail": "JR Capital (GP)",
+        "value": "1.5% of effective gross revenue"
+      },
+      {
+        "label": "Construction management",
+        "detail": "R&R Grandeur",
+        "value": "10% of hard costs"
+      },
+      {
+        "label": "Property management",
+        "detail": "R&R Grandeur",
+        "value": "10% of collected revenue"
+      },
+      {
+        "label": "Preferred return & promote",
+        "detail": "Set per deal",
+        "value": "Disclosed in offering docs"
+      }
+    ]
+  },
+  "note": {
+    "title": "Affiliate transactions — legal review required",
+    "body": "Construction management and property management are performed by an entity affiliated with the sponsor and are compensated regardless of investment performance. Have securities counsel review this page and the offering language before it goes live; the conflicts-of-interest disclosure in particular needs to be right."
+  }
+}

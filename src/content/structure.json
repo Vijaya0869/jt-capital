@@ -1,0 +1,106 @@
+{
+  "eyebrow": "Structure",
+  "heading": "How a deal is put together.",
+  "lede": "Single-asset and small-portfolio LLCs, syndicated deal by deal. Investors see the specific property, the specific budget and the specific terms before committing — no blind pool.",
+  "stack": [
+    {
+      "who": "Limited partners",
+      "what": "Passive capital. Quarterly reporting, annual K-1, preferred return paid before any sponsor promote.",
+      "amt": "Majority of equity"
+    },
+    {
+      "who": "JR Capital (GP)",
+      "what": "Sponsor. Sources, underwrites, signs on the debt, and carries co-investment alongside LP capital.",
+      "amt": "Co-invest + promote"
+    },
+    {
+      "who": "Senior debt",
+      "what": "Bank or agency financing sized so the asset services it in a downside case, with an interest reserve funded at close for construction and lease-up.",
+      "amt": "70% of hard basis"
+    },
+    {
+      "who": "R&R Grandeur",
+      "what": "Operating affiliate. Construction, renovation delivery and property management on market terms.",
+      "amt": "Affiliate services"
+    }
+  ],
+  "waterfall": {
+    "caption": "Distribution waterfall — Ohio Value-Add Portfolio I",
+    "columns": [
+      "Priority",
+      "Distribution",
+      "Terms"
+    ],
+    "rows": [
+      {
+        "label": "01 — Preferred return",
+        "detail": "To limited partners, accrued if not paid currently",
+        "value": "8%"
+      },
+      {
+        "label": "02 — Return of capital",
+        "detail": "100% of invested capital returned at sale",
+        "value": "100%"
+      },
+      {
+        "label": "03 — First split",
+        "detail": "Until a 15% limited partner IRR is achieved",
+        "value": "70 / 30 LP / GP"
+      },
+      {
+        "label": "04 — Residual split",
+        "detail": "Thereafter",
+        "value": "60 / 40 LP / GP"
+      }
+    ]
+  },
+  "capitalization": {
+    "caption": "Capitalization — Ohio Value-Add Portfolio I (illustrative)",
+    "columns": [
+      "Item",
+      "Amount",
+      "% of total"
+    ],
+    "rows": [
+      {
+        "label": "Purchase price",
+        "detail": "$2,197,000",
+        "value": "47.9%"
+      },
+      {
+        "label": "Capital expenditures",
+        "detail": "$1,866,000",
+        "value": "40.7%"
+      },
+      {
+        "label": "Fees, closing, financing & reserves",
+        "detail": "$526,758",
+        "value": "11.4%"
+      },
+      {
+        "label": "Total capitalization",
+        "detail": "$4,589,758",
+        "value": "100.0%"
+      },
+      {
+        "label": "Senior debt — 6.75%, interest only",
+        "detail": "$2,844,100",
+        "value": "62.0%"
+      },
+      {
+        "label": "Limited partner equity",
+        "detail": "$1,745,658",
+        "value": "38.0%"
+      },
+      {
+        "label": "Minimum investment",
+        "detail": "$50,000",
+        "value": "—"
+      }
+    ]
+  },
+  "note": {
+    "title": "Alternative structure under consideration",
+    "body": "A three-class version — Class A for current income with capped upside, Class B for growth, Class C for investments above $500,000 — would widen the investor pool but complicates the operating agreement, the waterfall model and the reporting. For a first institutional raise the single-class structure above is simpler to document and to explain. Both are set out in the offering deck."
+  }
+}

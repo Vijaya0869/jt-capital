@@ -1,0 +1,36 @@
+{
+  "eyebrow": "Criteria",
+  "heading": "What we buy, and what we pass on.",
+  "lede": "A clear box saves everyone time. Brokers and sellers who know the box send us the right deals.",
+  "columns": [
+    {
+      "title": "We buy",
+      "items": [
+        "Multifamily, 20–150 units",
+        "Ohio: Columbus, Cincinnati, Dayton, Cleveland metros",
+        "Under-managed, with a measurable rent-to-market gap",
+        "Adaptive-reuse buildings suited to residential conversion",
+        "Residential development sites, entitled or entitlable"
+      ]
+    },
+    {
+      "title": "We pass",
+      "items": [
+        "Deals priced on projected rents we cannot evidence today",
+        "Structural work we cannot scope before closing",
+        "Markets where we have no operating presence",
+        "Ground-up outside residential product types"
+      ]
+    },
+    {
+      "title": "Underwriting standard",
+      "items": [
+        "Stabilized value less capex sets the offer",
+        "Market and stabilized cap rates both tested",
+        "Debt sized to service in the downside case",
+        "No rent growth assumed in year one",
+        "Exit cap no tighter than entry implies"
+      ]
+    }
+  ]
+}

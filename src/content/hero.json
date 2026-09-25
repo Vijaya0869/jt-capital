@@ -1,0 +1,37 @@
+{
+  "kicker": "Private real estate · Ohio · Sponsor & general partner",
+  "headlineBefore": "Capital placed with the people who ",
+  "emphasis": "actually build",
+  "headlineAfter": " the asset.",
+  "standfirst": "JR Capital is the sponsor and general partner arm behind R&R Grandeur Properties. We raise and deploy private capital into Ohio multifamily and adaptive reuse, and we execute through an operating platform we own — acquisitions, construction and property management under one roof.",
+  "actions": [
+    {
+      "label": "See the current offering",
+      "href": "#offering",
+      "primary": true
+    },
+    {
+      "label": "How deals are structured",
+      "href": "#structure",
+      "primary": false
+    }
+  ],
+  "terms": [
+    {
+      "value": "Ohio",
+      "label": "Geographic focus"
+    },
+    {
+      "value": "20–150",
+      "label": "Unit range, multifamily"
+    },
+    {
+      "value": "70%",
+      "label": "Target leverage on basis"
+    },
+    {
+      "value": "3–7 yr",
+      "label": "Typical hold"
+    }
+  ]
+}
